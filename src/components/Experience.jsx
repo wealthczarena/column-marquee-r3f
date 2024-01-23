@@ -1,27 +1,19 @@
-import { Center, Environment, OrbitControls, Scroll, ScrollControls } from '@react-three/drei'
-import React from 'react'
-import { BoxGeometry } from 'three'
-import Model from './Model'
+import Can, { Instances as CanWrapper } from "./Can";
+import Lights from "./Lights";
+import { OrbitControls } from "@react-three/drei";
 
 const Experience = () => {
   return (
     <>
-        {/* <OrbitControls/> */}
-        {/* <mesh>
-            <boxGeometry/>
-            <meshStandardMaterial color='hotpink' metalness={1} roughness={0.1} />
-        </mesh> */}
-        <Environment preset='city' />
-        {/* <ScrollControls pages={2}> */}
-            {/* <Scroll> */}
-                {/* <Center> */}
-                    <Model/>
-                {/* </Center> */}
-            {/* </Scroll> */}
-        {/* </ScrollControls> */}
+      <OrbitControls />
+      <Lights />
+      <CanWrapper>
+        {[1, 1, 1, 1, 1, 1].map((_, i) => {
+          return <Can key={i} position={[i % 2 === 0 ? i : -i, 0, 0]} />;
+        })}
+      </CanWrapper>
     </>
-    
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;
