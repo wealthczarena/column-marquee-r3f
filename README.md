@@ -1,4 +1,4 @@
-# React + Vite
+# Column Marquee Feature with 3d Model using R3F
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
