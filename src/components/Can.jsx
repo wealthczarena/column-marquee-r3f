@@ -31,9 +31,10 @@ export function Instances({ children, ...props }) {
 export default function Can(props) {
   const instances = useContext(context)
   return (
-    <group {...props} dispose={null} scale={0.5}>
-      <instances.CANMaterial rotation={[-Math.PI / 2, -0.169, 0]} />
-      <instances.CANMaterial1 rotation={[-Math.PI / 2, -0.169, 0]} />
+    <group {...props} dispose={null} scale={0.3}>
+      {/* Math.PI rotates can to the front */}
+      <instances.CANMaterial rotation={[Math.PI / 2, Math.PI, 0]} />
+      <instances.CANMaterial1 rotation={[Math.PI / 2, Math.PI, 0]} />
     </group>
   )
 }

@@ -1,6 +1,6 @@
-# Column Marquee Feature with 3d Model using R3F
+# Vertical Marquee Effect with 3d Model using R3F
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This R3F project explores Instancing, Positions, Rotations, Camera Controls, Lighting, and other key elements to create an enjoyable 3D experience that goes beyond a simple grid.
 
 Currently, two official plugins are available:
 
